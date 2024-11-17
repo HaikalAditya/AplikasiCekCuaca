@@ -56,6 +56,7 @@ public class cekCuacaForm extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(647, 800));
 
         jPanel1.setLayout(new java.awt.CardLayout());
 
@@ -66,6 +67,7 @@ public class cekCuacaForm extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.NORTH);
 
+        jPanel2.setPreferredSize(new java.awt.Dimension(647, 750));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         fieldInput.setPreferredSize(new java.awt.Dimension(150, 30));
@@ -334,7 +336,7 @@ private void saveWeatherToFile(String city, String description, String temperatu
         writer.append(city).append(",");
         writer.append(description).append(",");
         writer.append(temperature).append(",");
-        writer.append(humidity).append(",");
+        writer.append(humidity).append("\n");
         JOptionPane.showMessageDialog(this, "Data cuaca berhasil disimpan ke file CSV.");
     } catch (IOException e) {
         JOptionPane.showMessageDialog(this, "Gagal menyimpan data ke file.", "Error", JOptionPane.ERROR_MESSAGE);
